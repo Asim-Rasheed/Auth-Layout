@@ -1,5 +1,3 @@
-// src/components/Swapbtns.jsx
-
 export default function Swapbtns({
   login,
   register,

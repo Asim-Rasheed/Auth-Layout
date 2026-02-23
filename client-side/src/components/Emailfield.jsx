@@ -1,14 +1,18 @@
-export default function Emailfield({ label, text }) {
+export default function Emailfield({ label, text, value, onChange, onBlur, name, error, touched}) {
   return (
     <div className="mb-3 text-white">
       <label className="form-label">{label}</label>
       <input
-      style={{background: "gray", color: "white"}}
         type="email"
         placeholder={text}
-        required
         className="form-control"
+        style={{ background: "gray", color: "white" }}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        name={name}
       />
+      {error && touched && <div className="text-danger">{error}</div>}
     </div>
   );
 }
