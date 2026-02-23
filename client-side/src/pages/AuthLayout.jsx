@@ -5,7 +5,7 @@ import Appdescription from "../components/Appdescription";
 import Applogoimg from "../assets/images/applogo.png";
 import Swapbtns from "../components/Swapbtns";
 import SignIn from "./SignIn";
-import Signup from "./Signup";
+import SignUp from "./SignUp";
 
 export default function AuthLayout() {
   const [activeScreen, setActiveScreen] = useState("login");
@@ -63,7 +63,7 @@ export default function AuthLayout() {
       />
 
       <div className="mt-4">
-        {activeScreen === "login" ? <SignIn /> : <Signup />}
+        {activeScreen === "login" ? <SignIn /> : <SignUp />}
       </div>
     </div>
   </div>

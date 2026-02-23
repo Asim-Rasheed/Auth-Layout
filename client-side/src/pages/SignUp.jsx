@@ -6,7 +6,7 @@ import Passwordfield from "../components/Passwordfield";
 import Button from "../components/Button";
 import Textfield from "../components/Textfield";
 
-export default function Signup() {
+export default function SignUp() {
     const initialValues = {
         email: "",
         password: "",
