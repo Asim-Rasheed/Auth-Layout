@@ -84,7 +84,7 @@ export default function SignUp() {
                         touched={touched.password}
                     />
 
-                    <Button text="Create Account" />
+                    <Button text="Create Account" type="submit" />
                 </Form>
             )}
         </Formik>

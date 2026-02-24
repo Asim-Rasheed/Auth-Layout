@@ -1,7 +1,7 @@
 export default function Passwordfield({ label, text, value, onChange, onBlur, name, error, touched }) {
   return (
     <div className="text-white mb-3">
-      <label className="form-label">{label}</label>
+      <label className="form-label fw-bold">{label}</label>
       <style>
         {`
           input::placeholder {

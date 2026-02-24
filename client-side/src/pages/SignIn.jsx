@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 import Emailfield from "../components/Emailfield";
 import Passwordfield from "../components/Passwordfield";
 import Button from "../components/Button";
-import ForgotPassword from "../components/ForgotPassword";
+import ForgotPassbtn from "../components/ForgotPassbtn";
 
 export default function SignIn() {
   const initialValues = {
@@ -70,7 +70,7 @@ export default function SignIn() {
             touched={touched.password}
           />
 
-          <ForgotPassword
+          <ForgotPassbtn
             text="Forgot Password?" />
 
           <Button type="submit" text="Initialize Session" />

@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AuthLayout from "./pages/AuthLayout";
+import AuthScreen from "./pages/AuthScreen";
+import ForgotPassword from "./pages/Forgotpassword";
 function App(){
   return(
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<AuthLayout/>}/>
+      <Route path="/" element={<AuthScreen/>}/>
+      <Route path="/forgotpassword" element={<ForgotPassword/>}/>
     </Routes>
     </BrowserRouter>
   )
