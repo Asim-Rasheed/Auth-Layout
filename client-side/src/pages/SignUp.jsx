@@ -28,7 +28,7 @@ export default function SignUp() {
     });
 
     const handleSubmit = (values) => {
-        alert(`Email: ${values.email}\nPassword: ${values.password}`);
+        alert(`Name: ${values.name}\nEmail: ${values.email}\nPassword: ${values.password}`);
     };
 
     return (
@@ -43,7 +43,6 @@ export default function SignUp() {
                 touched,
                 handleChange,
                 handleBlur,
-                submitCount,
             }) => (
                 <Form
                     className="d-flex flex-column justify-content-center"

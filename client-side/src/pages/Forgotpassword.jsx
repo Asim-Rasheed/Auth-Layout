@@ -51,7 +51,7 @@ export default function ForgotPassword() {
                             onBlur={handleBlur}
                             onChange={handleChange}
                             error={errors.email} />
-                        <Button text="Reset Password" />
+                        <Button type="submit" text="Reset Password"/>
                     </AuthLayout>
                 </Form>
             )}
