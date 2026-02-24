@@ -2,13 +2,13 @@ import { useState } from "react";
 import Swapbtns from "../components/Swapbtns";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import AuthLayout from "../components/AuthLayout";
+import AuthCardLayout from "../components/AuthCardLayout";
 
 export default function AuthScreen() {
   const [activeScreen, setActiveScreen] = useState("login");
 
   return (
-    <AuthLayout>
+    <AuthCardLayout>
       <Swapbtns
         login="Login"
         register="Register"
@@ -19,6 +19,6 @@ export default function AuthScreen() {
       <div className="mt-4">
         {activeScreen === "login" ? <SignIn /> : <SignUp />}
       </div>
-    </AuthLayout>
+    </AuthCardLayout>
   );
 }

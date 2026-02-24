@@ -1,19 +1,11 @@
-import Applogo from "../components/Applogo";
-import Appdescription from "../components/Appdescription";
+import Applogo from "./Applogo";
+import Appdescription from "./Appdescription";
 import Applogoimg from "../assets/images/applogo.png";
+import Background from "./Background";
 
-export default function AuthLayout({ children }) {
+export default function AuthCardLayout({ children }) {
   return (
-    <div
-      className="d-flex justify-content-center align-items-center vw-100 vh-100"
-      style={{
-        background: `
-          radial-gradient(circle at top left, #0b56c0 0%, transparent 15%),
-          radial-gradient(circle at bottom right, #0b56c0 0%, transparent 15%),
-          #010420
-        `,
-      }}
-    >
+   <Background>
       <div
         className="card overflow-auto d-flex flex-column flex-md-row"
         style={{
@@ -53,10 +45,11 @@ export default function AuthLayout({ children }) {
             `,
           }}
         >
-          {/* Render the screen content here */}
+     
           {children}
+
         </div>
       </div>
-    </div>
+      </Background>
   );
 }

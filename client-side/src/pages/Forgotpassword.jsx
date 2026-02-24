@@ -1,4 +1,4 @@
-import AuthLayout from "../components/AuthLayout";
+import AuthLayout from "../components/AuthCardLayout";
 import Emailfield from "../components/Emailfield";
 import { MdLockPerson } from "react-icons/md";
 import Heading from "../components/Heading";
