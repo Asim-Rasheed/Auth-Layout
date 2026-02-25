@@ -5,8 +5,10 @@ import Emailfield from "../components/Emailfield";
 import Passwordfield from "../components/Passwordfield";
 import Button from "../components/Button";
 import ForgotPassbtn from "../components/ForgotPassbtn";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
+  const navigate = useNavigate();
   const initialValues = {
     email: "",
     password: "",
@@ -25,6 +27,7 @@ export default function SignIn() {
   });
 
   const handleSubmit = (values) => {
+    navigate("/dashboard")
     alert(`Email: ${values.email}\nPassword: ${values.password}`);
   };
 

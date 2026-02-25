@@ -1,0 +1,17 @@
+import { FaBell, FaCog } from "react-icons/fa";
+
+export default function DashboardHeader({ title, subtitle, onShare, onNotification, onSettings }) {
+  return (
+    <div className="d-flex justify-content-between align-items-start p-3 rounded" style={{ color: "white", background: "#010420", border: "3px solid black" }}>
+      <div>
+        <h3 className="mb-1">{title}</h3>
+        <p className="mb-0" style={{ fontSize: "14px" }}>{subtitle}</p>
+      </div>
+      <div className="d-flex align-items-center gap-3">
+        <FaBell style={{ cursor: "pointer" }} onClick={onNotification} />
+        <FaCog style={{ cursor: "pointer" }} onClick={onSettings} />
+        <button className="btn text-white px-4 rounded-pill" style={{ background: "orange" }} onClick={onShare}>Share</button>
+      </div>
+    </div>
+  )
+}

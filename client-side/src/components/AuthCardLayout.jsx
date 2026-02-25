@@ -35,7 +35,7 @@ export default function AuthCardLayout({ children }) {
 
         {/* Right Side */}
         <div
-          className="d-flex flex-column justify-content-center p-4 p-md-5"
+          className="d-flex flex-column justify-content-center p-5 p-md-5"
           style={{
             flex: 1,
             background: `
