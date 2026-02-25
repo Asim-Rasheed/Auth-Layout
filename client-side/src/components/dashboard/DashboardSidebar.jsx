@@ -24,7 +24,7 @@ export default function DashboardSidebar({ menuItems, activeItem, onSelect, show
       }}
     >
           <button
-          className="btn btn-sm btn-start btn-dark  mb-3 d-md-none"
+          className="btn btn-sm btn-dark ms-auto mb-3 d-md-none"
           onClick={onClose}
         >
           <FaTimes />
