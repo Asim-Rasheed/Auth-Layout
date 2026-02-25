@@ -1,4 +1,5 @@
 import { FaTimes } from "react-icons/fa"
+import Applogo from "../../assets/images/applogo.png"
 export default function DashboardSidebar({ menuItems, activeItem, onSelect, show, onClose}) {
   return (
     <>
@@ -30,10 +31,24 @@ export default function DashboardSidebar({ menuItems, activeItem, onSelect, show
           <FaTimes />
         </button>
 
-      <h4 className="mb-4 p-3 text-center rounded" style={{ background: "linear-gradient(90deg, #7b2ff7, #00c6ff)" }}>App Studio</h4>
+      <h4 
+      className="mb-4 p-3 text-center rounded" style={{ background: "linear-gradient(90deg, #7b2ff7, #00c6ff)" }}>
+         <img
+    src={Applogo}
+    alt="Logo"
+    style={{
+      width: "50px",
+      height: "50px",
+      borderRadius: "50px",
+      marginRight: "10px"
+    }}
+  />My App</h4>
+
       <ul className="nav flex-column text-white">
         {menuItems.map((item, id) => (
-          <li key={id} className={`nav-item mb-2 ${activeItem === item.name ? "fw-bold text-primary" : ""}`} style={{ cursor: "pointer" }} onClick={() => onSelect(item.name)}>
+          <li key={id} className={`nav-item mb-2 rounded ${activeItem === item.name ? "fw-bold text-white " : "gray"}`} 
+          style={{ background: activeItem === item.name ? "linear-gradient(90deg, #311263, #1e293b)" : "transparent", cursor: "pointer" ,   padding: "8px 12px",}} 
+          onClick={() => onSelect(item.name)}>
             {item.icon}
             <span className="ms-2">{item.label}</span>
           </li>

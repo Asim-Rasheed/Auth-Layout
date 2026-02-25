@@ -9,7 +9,7 @@ export default function UpcomingProjectCard({ upcoming }) {
               <div
                 className="card h-100 border-0 rounded"
                 style={{
-                  background: "linear-gradient(90deg, #7b2ff7, #00c6ff)",
+                  background: "linear-gradient(90deg, #311263, #1e293b)",
                   color: "white",
                 }}
               >

@@ -5,6 +5,7 @@ import StatCard from "../components/dashboard/StatCard";
 import ProjectCard from "../components/dashboard/ProjectCard";
 import InsightGraph from "../components/dashboard/Chart";
 import UpcomingProjectCard from "../components/dashboard/UpcomingProjectCard";
+import SectionHeader from "../components/dashboard/SectionHeader";
 import { useState } from "react";
 import { FaTachometerAlt, FaTasks, FaCalendarAlt, FaUsers, FaCog, FaCheckCircle, FaChartBar, FaClock } from "react-icons/fa";
 
@@ -46,7 +47,7 @@ export default function Dashboard() {
             date: "Feb 20, 2026",
             progress: 75,
             avatars: ["https://i.pravatar.cc/30?img=1", "https://i.pravatar.cc/30?img=2"],
-            buttonText: "Track",
+            buttonText: "View",
 
         },
         {
@@ -54,7 +55,7 @@ export default function Dashboard() {
             date: "Feb 18, 2026",
             progress: 40,
             avatars: ["https://i.pravatar.cc/30?img=3", "https://i.pravatar.cc/30?img=4"],
-            buttonText: "Track",
+            buttonText: "View",
 
         },
         {
@@ -62,7 +63,7 @@ export default function Dashboard() {
             date: "Feb 15, 2026",
             progress: 55,
             avatars: ["https://i.pravatar.cc/30?img=5", "https://i.pravatar.cc/30?img=6"],
-            buttonText: "Track",
+            buttonText: "View",
             gradient: "linear-gradient(90deg, #1f4037, #99f2c8)",
         },
         {
@@ -70,7 +71,7 @@ export default function Dashboard() {
             date: "Feb 12, 2026",
             progress: 99,
             avatars: ["https://i.pravatar.cc/30?img=7", "https://i.pravatar.cc/30?img=8"],
-            buttonText: "Track",
+            buttonText: "View",
 
         },
         {
@@ -78,7 +79,7 @@ export default function Dashboard() {
             date: "Feb 10, 2026",
             progress: 60,
             avatars: ["https://i.pravatar.cc/30?img=9", "https://i.pravatar.cc/30?img=10"],
-            buttonText: "Track",
+            buttonText: "View",
 
         },
         {
@@ -86,7 +87,7 @@ export default function Dashboard() {
             date: "Feb 5, 2026",
             progress: 35,
             avatars: ["https://i.pravatar.cc/30?img=11", "https://i.pravatar.cc/30?img=12"],
-            buttonText: "Track",
+            buttonText: "View",
 
         },
     ];
@@ -145,11 +146,11 @@ export default function Dashboard() {
                     menuItems={menuItems}
                     activeItem={activeMenu}
                     onSelect={setActiveMenu}
-                            show={sidebarOpen} 
-                             onClose={() => setSidebarOpen(false)}
+                    show={sidebarOpen}
+                    onClose={() => setSidebarOpen(false)}
                 />
 
-                <div style={{ flex: 1,overflowY: "auto", flexGrow: 1, display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1, overflowY: "auto", flexGrow: 1, display: "flex", flexDirection: "column" }}>
 
                     <DashboardHeader
                         title="Dashboard"
@@ -157,21 +158,29 @@ export default function Dashboard() {
                         onShare={() => alert("Share clicked")}
                         onNotification={() => alert("Notification clicked")}
                         onSettings={() => alert("Settings clicked")}
-                           onMenuClick={() => setSidebarOpen(!sidebarOpen)} // toggle on mobile
+                        onMenuClick={() => setSidebarOpen(!sidebarOpen)} // toggle on mobile
                     />
 
                     <div style={{ padding: 20 }}>
                         <StatCard cards={cards} />
                     </div>
 
-                    <div><h3 style={{ color: "white", paddingLeft: 20, marginBottom: 0 }}>Project Overview</h3></div>
+                    <SectionHeader
+                        title="Project Overview"
+                        buttonText="View All"
+                        color="white"
+                    />
 
                     <div style={{ padding: 20 }}>
                         <ProjectCard projects={projects} graph={<InsightGraph />} /></div>
 
-                         <div><h3 style={{ color: "white", paddingLeft: 20, marginBottom: 0 }}>Upcoming Project</h3></div>
+                    <SectionHeader
+                        title="Upcoming Projects"
+                        buttonText="View All"
+                        color="white"
+                    />
 
-                    <div style={{ padding: 20 }}><UpcomingProjectCard upcoming={upcomingProjectsData} /></div> 
+                    <div style={{ padding: 20 }}><UpcomingProjectCard upcoming={upcomingProjectsData} /></div>
                 </div>
             </div>
         </Background>

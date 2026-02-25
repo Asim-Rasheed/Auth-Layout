@@ -11,7 +11,7 @@ export default function ProjectCard({ projects, graph }) {
                         <div key={idx} className="col-md-4">
                             <div className="card h-100 border-0 rounded" style={{
                                 background:
-                                    "linear-gradient(90deg, #7b2ff7, #00c6ff)",
+                                    "linear-gradient(70deg, #311263, #1e293b)",
                                 color: "white",
                             }}>
                                 <div
@@ -83,7 +83,7 @@ export default function ProjectCard({ projects, graph }) {
                 <div className="card flex-fill border-0 rounded">
                     <div style={{
                         background:
-                            "linear-gradient(90deg, #7b2ff7, #00c6ff)",
+                            "linear-gradient(70deg, #311263, #1e293b)",
                         color: "white",
                     }} className="card-body rounded">
                         <h6 className="card-title mb-3">Productivity Insight</h6>
