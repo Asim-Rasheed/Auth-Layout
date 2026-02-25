@@ -17,7 +17,7 @@ export default function DashboardHeader({ title, subtitle, onShare, onNotificati
       <div className="d-flex align-items-center gap-3">
         <FaBell style={{ cursor: "pointer" }} onClick={onNotification} />
         <FaCog style={{ cursor: "pointer" }} onClick={onSettings} />
-        <button className="btn text-white px-4 rounded-pill" style={{ background: "linear-gradient(90deg, #7b2ff7, #00c6ff)" }}
+        <button className="btn text-white border-0 sm-btn rounded-pill" style={{ background: "linear-gradient(90deg, #7b2ff7, #00c6ff)" }}
           onClick={onShare}>Share</button>
       </div>
     </div>

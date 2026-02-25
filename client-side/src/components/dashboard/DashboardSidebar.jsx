@@ -18,7 +18,7 @@ export default function DashboardSidebar({ menuItems, activeItem, onSelect, show
         width: 250,
         top: 0,
         height: "100vh",
-        position: "fixed",
+        position: show ? "fixed" : "sticky",
         background: "#1e293b",
         zIndex: 1001, // overlay above content on mobile
       }}
