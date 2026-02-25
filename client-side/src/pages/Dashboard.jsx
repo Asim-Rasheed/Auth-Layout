@@ -3,6 +3,7 @@ import DashboardSidebar from "../components/dashboard/DashboardSidebar";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 import StatCard from "../components/dashboard/StatCard";
 import ProjectCard from "../components/dashboard/ProjectCard";
+import InsightGraph from "../components/dashboard/Chart";
 
 
 import { useState } from "react";
@@ -45,7 +46,7 @@ export default function Dashboard() {
             progress: 75,
             avatars: ["https://i.pravatar.cc/30?img=1", "https://i.pravatar.cc/30?img=2"],
             buttonText: "Track",
-         
+
         },
         {
             title: "Landing Page",
@@ -53,7 +54,7 @@ export default function Dashboard() {
             progress: 40,
             avatars: ["https://i.pravatar.cc/30?img=3", "https://i.pravatar.cc/30?img=4"],
             buttonText: "Track",
-        
+
         },
         {
             title: "Static UI",
@@ -69,7 +70,7 @@ export default function Dashboard() {
             progress: 99,
             avatars: ["https://i.pravatar.cc/30?img=7", "https://i.pravatar.cc/30?img=8"],
             buttonText: "Track",
-        
+
         },
         {
             title: "Web App",
@@ -77,7 +78,7 @@ export default function Dashboard() {
             progress: 60,
             avatars: ["https://i.pravatar.cc/30?img=9", "https://i.pravatar.cc/30?img=10"],
             buttonText: "Track",
-     
+
         },
         {
             title: "Testing",
@@ -85,7 +86,7 @@ export default function Dashboard() {
             progress: 35,
             avatars: ["https://i.pravatar.cc/30?img=11", "https://i.pravatar.cc/30?img=12"],
             buttonText: "Track",
-    
+
         },
     ];
 
@@ -112,11 +113,11 @@ export default function Dashboard() {
                     <div style={{ padding: 20 }}>
                         <StatCard cards={cards} />
                     </div>
-<div>  <h3 style={{color: "white", paddingLeft: 20, marginBottom: 0}}>Project Overview</h3></div>
-                 
 
-                    <div style={{padding: 20}}>
-                        <ProjectCard projects={projects} /></div>
+                    <div><h3 style={{ color: "white", paddingLeft: 20, marginBottom: 0 }}>Project Overview</h3></div>
+
+                    <div style={{ padding: 20 }}>
+                        <ProjectCard projects={projects} graph={<InsightGraph/>}/></div>
                 </div>
             </div>
         </Background>

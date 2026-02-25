@@ -1,7 +1,7 @@
 
 import { FaCalendarAlt } from "react-icons/fa";
 
-export default function ProjectCard({ projects, GraphComponent }) {
+export default function ProjectCard({ projects, graph }) {
     return (
         <div className="row g-3">
             {/* Left */}
@@ -80,10 +80,15 @@ export default function ProjectCard({ projects, GraphComponent }) {
 
             {/* Right: Graph Card */}
             <div className="col-lg-4 d-flex">
-                <div className="card flex-fill shadow-sm">
-                    <div className="card-body">
-                        <h6 className="card-title mb-3">Graph</h6>
-                        {GraphComponent && <GraphComponent />}
+                <div className="card flex-fill border-0 rounded">
+                    <div style={{
+                        background:
+                            "linear-gradient(90deg, #7b2ff7, #00c6ff)",
+                        color: "white",
+                    }} className="card-body rounded">
+                        <h6 className="card-title mb-3">Productivity Insight</h6>
+                        <div style={{ height: "250px", width: "100%" }}>{graph}</div>
+
                     </div>
                 </div>
             </div>
