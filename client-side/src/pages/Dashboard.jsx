@@ -4,13 +4,14 @@ import DashboardHeader from "../components/dashboard/DashboardHeader";
 import StatCard from "../components/dashboard/StatCard";
 import ProjectCard from "../components/dashboard/ProjectCard";
 import InsightGraph from "../components/dashboard/Chart";
-
-
+import UpcomingProjectCard from "../components/dashboard/UpcomingProjectCard";
 import { useState } from "react";
 import { FaTachometerAlt, FaTasks, FaCalendarAlt, FaUsers, FaCog, FaCheckCircle, FaChartBar, FaClock } from "react-icons/fa";
 
+
 export default function Dashboard() {
     const [activeMenu, setActiveMenu] = useState("Dashboard");
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const menuItems = [
         { name: "Dashboard", label: "Dashboard", icon: <FaTachometerAlt /> },
@@ -90,6 +91,52 @@ export default function Dashboard() {
         },
     ];
 
+    const upcomingProjectsData = [
+        {
+            title: "Mobile App UI",
+            subtitle: "Design new onboarding screens",
+            priority: "High",
+            creator: "Ali",
+            image: "https://i.pravatar.cc/30?img=9",
+        },
+        {
+            title: "Marketing Campaign",
+            subtitle: "Social media planning",
+            priority: "Medium",
+            creator: "Ali",
+            image: "https://i.pravatar.cc/30?img=11",
+        },
+        {
+            title: "Backend Upgrade",
+            subtitle: "Migrate to Node v20",
+            priority: "Low",
+            creator: "Ahmed",
+            image: "https://i.pravatar.cc/30?img=7",
+        },
+        {
+            title: "Mobile App UI",
+            subtitle: "Design new onboarding screens",
+            priority: "High",
+            creator: "Ali",
+            image: "https://i.pravatar.cc/30?img=11",
+        },
+        {
+            title: "Marketing Campaign",
+            subtitle: "Social media planning",
+            priority: "Medium",
+            creator: "Ahmad",
+            image: "https://i.pravatar.cc/30?img=7",
+        },
+        {
+            title: "Backend Upgrade",
+            subtitle: "Migrate to Node v20",
+            priority: "Low",
+            creator: "Ahmed",
+            image: "https://i.pravatar.cc/30?img=11",
+        },
+
+    ];
+
     return (
         <Background>
             <div style={{ display: "flex", minHeight: "100vh", width: "100vw" }}>
@@ -98,9 +145,11 @@ export default function Dashboard() {
                     menuItems={menuItems}
                     activeItem={activeMenu}
                     onSelect={setActiveMenu}
+                            show={sidebarOpen} 
+                             onClose={() => setSidebarOpen(false)}
                 />
 
-                <div style={{ overflowY: "auto", flexGrow: 1, display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1,overflowY: "auto", flexGrow: 1, display: "flex", flexDirection: "column" }}>
 
                     <DashboardHeader
                         title="Dashboard"
@@ -108,6 +157,7 @@ export default function Dashboard() {
                         onShare={() => alert("Share clicked")}
                         onNotification={() => alert("Notification clicked")}
                         onSettings={() => alert("Settings clicked")}
+                           onMenuClick={() => setSidebarOpen(!sidebarOpen)} // toggle on mobile
                     />
 
                     <div style={{ padding: 20 }}>
@@ -117,7 +167,11 @@ export default function Dashboard() {
                     <div><h3 style={{ color: "white", paddingLeft: 20, marginBottom: 0 }}>Project Overview</h3></div>
 
                     <div style={{ padding: 20 }}>
-                        <ProjectCard projects={projects} graph={<InsightGraph/>}/></div>
+                        <ProjectCard projects={projects} graph={<InsightGraph />} /></div>
+
+                         <div><h3 style={{ color: "white", paddingLeft: 20, marginBottom: 0 }}>Upcoming Project</h3></div>
+
+                    <div style={{ padding: 20 }}><UpcomingProjectCard upcoming={upcomingProjectsData} /></div> 
                 </div>
             </div>
         </Background>

@@ -19,7 +19,7 @@ export default function ProjectCard({ projects, graph }) {
 
                                 >
                                     {/* Title */}
-                                    <h6 className="card-title mb-1">{project.title}</h6>
+                                    <h6 className="card-title mb-1 fw-bold">{project.title}</h6>
 
                                     {/* Date with Calendar Icon */}
                                     <div
