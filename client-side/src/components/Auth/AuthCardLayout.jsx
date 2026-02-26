@@ -1,6 +1,6 @@
 import Applogo from "./Applogo";
 import Appdescription from "./Appdescription";
-import Applogoimg from "../assets/images/applogo.png";
+import Applogoimg from "../../assets/images/applogo.png";
 import Background from "./Background";
 
 export default function AuthCardLayout({ children }) {

@@ -1,10 +1,10 @@
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import Heading from "../components/Heading";
-import Emailfield from "../components/Emailfield";
-import Passwordfield from "../components/Passwordfield";
-import Button from "../components/Button";
-import Textfield from "../components/Textfield";
+import Heading from "../components/Auth/Heading";
+import Emailfield from "../components/Auth/Emailfield";
+import Passwordfield from "../components/Auth/Passwordfield";
+import Button from "../components/Auth/Button";
+import Textfield from "../components/Auth/Textfield";
 
 export default function SignUp() {
     const initialValues = {

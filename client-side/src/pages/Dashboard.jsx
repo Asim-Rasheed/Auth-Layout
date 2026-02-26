@@ -1,9 +1,9 @@
-import Background from "../components/Background"
+import Background from "../components/Auth/Background"
 import DashboardSidebar from "../components/dashboard/DashboardSidebar";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 import StatCard from "../components/dashboard/StatCard";
 import ProjectCard from "../components/dashboard/ProjectCard";
-import InsightGraph from "../components/dashboard/Chart";
+import InsightGraph from "../components/Auth/Chart";
 import UpcomingProjectCard from "../components/dashboard/UpcomingProjectCard";
 import SectionHeader from "../components/dashboard/SectionHeader";
 import { useState } from "react";

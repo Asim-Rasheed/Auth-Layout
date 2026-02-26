@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Swapbtns from "../components/Swapbtns";
+import Swapbtns from "../components/Auth/Swapbtns";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import AuthCardLayout from "../components/AuthCardLayout";
+import AuthCardLayout from "../components/Auth/AuthCardLayout";
 
 export default function AuthScreen() {
   const [activeScreen, setActiveScreen] = useState("login");

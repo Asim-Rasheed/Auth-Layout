@@ -1,8 +1,8 @@
-import AuthLayout from "../components/AuthCardLayout";
-import Emailfield from "../components/Emailfield";
+import AuthLayout from "../components/Auth/AuthCardLayout";
+import Emailfield from "../components/Auth/Emailfield";
 import { MdLockPerson } from "react-icons/md";
-import Heading from "../components/Heading";
-import Button from "../components/Button";
+import Heading from "../components/Auth/Heading";
+import Button from "../components/Auth/Button";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
