@@ -6,7 +6,7 @@ import Button from "../components/Auth/Button";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
-export default function ForgotPassword() {
+export default function ForgotPasswordScreen() {
     const initialValues = {
         email: "",
         password: "",

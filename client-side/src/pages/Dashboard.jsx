@@ -1,26 +1,13 @@
-import Background from "../components/Auth/Background"
-import DashboardSidebar from "../components/dashboard/DashboardSidebar";
-import DashboardHeader from "../components/dashboard/DashboardHeader";
+
 import StatCard from "../components/dashboard/StatCard";
 import ProjectCard from "../components/dashboard/ProjectCard";
 import InsightGraph from "../components/Auth/Chart";
 import UpcomingProjectCard from "../components/dashboard/UpcomingProjectCard";
 import SectionHeader from "../components/dashboard/SectionHeader";
-import { useState } from "react";
 import { FaTachometerAlt, FaTasks, FaCalendarAlt, FaUsers, FaCog, FaCheckCircle, FaChartBar, FaClock } from "react-icons/fa";
 
 
 export default function Dashboard() {
-    const [activeMenu, setActiveMenu] = useState("Dashboard");
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-
-    const menuItems = [
-        { name: "Dashboard", label: "Dashboard", icon: <FaTachometerAlt /> },
-        { name: "Projects", label: "Projects", icon: <FaTasks /> },
-        { name: "Calendar", label: "Calendar", icon: <FaCalendarAlt /> },
-        { name: "Team", label: "Team", icon: <FaUsers /> },
-        { name: "Settings", label: "Settings", icon: <FaCog /> },
-    ];
 
     const cards = [
         {
@@ -139,50 +126,28 @@ export default function Dashboard() {
     ];
 
     return (
-        <Background>
-            <div style={{ display: "flex", minHeight: "100vh", width: "100vw" }}>
-
-                <DashboardSidebar
-                    menuItems={menuItems}
-                    activeItem={activeMenu}
-                    onSelect={setActiveMenu}
-                    show={sidebarOpen}
-                    onClose={() => setSidebarOpen(false)}
-                />
-
-                <div style={{ flex: 1, overflowY: "auto", flexGrow: 1, display: "flex", flexDirection: "column" }}>
-
-                    <DashboardHeader
-                        title="Dashboard"
-                        subtitle="Welcome back! Track your activities."
-                        onShare={() => alert("Share clicked")}
-                        onNotification={() => alert("Notification clicked")}
-                        onSettings={() => alert("Settings clicked")}
-                        onMenuClick={() => setSidebarOpen(!sidebarOpen)} // toggle on mobile
-                    />
-
-                    <div style={{ padding: 20 }}>
-                        <StatCard cards={cards} />
-                    </div>
-
-                    <SectionHeader
-                        title="Project Overview"
-                        buttonText="View All"
-                        color="white"
-                    />
-
-                    <div style={{ padding: 20 }}>
-                        <ProjectCard projects={projects} graph={<InsightGraph />} /></div>
-
-                    <SectionHeader
-                        title="Upcoming Projects"
-                        buttonText="View All"
-                        color="white"
-                    />
-
-                    <div style={{ padding: 20 }}><UpcomingProjectCard upcoming={upcomingProjectsData} /></div>
-                </div>
+        <>
+            <div style={{ padding: 20 }}>
+                <StatCard cards={cards} />
             </div>
-        </Background>
+
+            <SectionHeader
+                title="Project Overview"
+                buttonText="View All"
+                color="white"
+            />
+
+            <div style={{ padding: 20 }}>
+                <ProjectCard projects={projects} graph={<InsightGraph />} /></div>
+
+            <SectionHeader
+                title="Upcoming Projects"
+                buttonText="View All"
+                color="white"
+            />
+
+            <div style={{ padding: 20 }}><UpcomingProjectCard upcoming={upcomingProjectsData} /></div>
+        </>
+
     )
 }
