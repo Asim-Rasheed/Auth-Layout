@@ -1,5 +1,3 @@
-
-
 export default function TeamCard({ team }) {
     return (
         <div className="row g-3">
@@ -13,7 +11,7 @@ export default function TeamCard({ team }) {
                                 color: "white",
                             }}>
                                 <div className="card-body d-flex align-items-center justify-content-between">
-                                
+
                                     <div className="d-flex flex-column">
                                         <h6 className="mb-1 fw-bold">{team.name}</h6>
                                         <span>{team.role}</span>
